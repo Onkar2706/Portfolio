@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Adjust if your default branch is different
 
 jobs:
   deploy:
@@ -12,8 +12,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
-        uses: jamesives/github-pages-deploy-action@v4.6.8
+      - name: Install Node.js
+        uses: actions/setup-node@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          node-version: '18'  # Adjust if you want a different version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: jamesives/github-pages-deploy-action@v4.6.8  # Use a valid version
+        with:
+          token: ${{ secrets.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 }}  # Use 'token' instead of 'github_token'
+          folder: build  # Use 'folder' instead of 'publish_dir'
+
