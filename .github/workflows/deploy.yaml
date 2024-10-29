@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -26,6 +27,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: jamesives/github-pages-deploy-action@v4.6.8  # Use a valid version
         with:
-          token: ${{ secrets.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 }}  # Use 'token' instead of 'github_token'
-          folder: build  # Use 'folder' instead of 'publish_dir'
-
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in GITHUB_TOKEN
+          folder: build  # Folder containing the built files
