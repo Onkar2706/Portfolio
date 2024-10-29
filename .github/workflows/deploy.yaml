@@ -26,5 +26,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: jamesives/github-pages-deploy-action@v4.6.8  # Use a valid version
         with:
-          token: ${{ secrets.test  }}  # Use the built-in GITHUB_TOKEN
+          
           folder: build  # Use 'folder' to specify the build directory
