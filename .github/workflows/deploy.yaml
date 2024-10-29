@@ -3,28 +3,28 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust if your default branch is different
-
+      - main  # Or your default branch
+      
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          node-version: '18'  # Adjust if you want a different version
+          persist-credentials: false
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./my-app
 
-      - name: Build the project
+      - name: Build project
         run: npm run build
+        working-directory: ./my-app
 
       - name: Deploy to GitHub Pages
-        uses: jamesives/github-pages-deploy-action@v4.6.8  # Use a valid version
-        with:
-          
-          folder: build  # Use 'folder' to specify the build directory
+        run: npm run deploy
+        working-directory: ./my-app
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
