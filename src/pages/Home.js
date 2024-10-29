@@ -1,7 +1,8 @@
 import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import EmailIcon from "@material-ui/icons/Instagram";
+import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
+
 
 function Home() {
   return (
@@ -10,9 +11,23 @@ function Home() {
       <h2>Hi, my name is Onkar.</h2>
       <div className="prompt"></div>
       <p>A software developer with a passion for learning and creating.</p>
-      <LinkedInIcon />
-      <EmailIcon />
-      <GitHubIcon />
+      <a
+            href="https://www.linkedin.com/in/onkarmahamuni/" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon />
+          </a>
+          <a href="mailto:onkarmahamuni007@gmail.com"> 
+            <EmailIcon />
+          </a>
+          <a
+            href="https://github.com/Onkar2706"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon />
+          </a>
 
       <div className="skills">
         <h1> Skills</h1>
