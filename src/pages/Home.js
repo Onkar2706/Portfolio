@@ -2,24 +2,27 @@ import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import "../styles/Home.css"
-
+import "../styles/Home.css";
 
 function Home() {
   return (
     <div className="home">
-      <div className="about"></div>
-      <h2>Hi, my name is Onkar.</h2>
-      <div className="prompt"></div>
-      <p>A software developer with a passion for learning and creating.</p>
-      <a
-            href="https://www.linkedin.com/in/onkarmahamuni/" 
+      <div className="about">
+        <h2>Hi, I am Onkar.</h2>
+        <div className="prompt">
+          <p>A software developer with a passion for learning and creating.</p>
+        </div>
+        
+        {/* Social Media Icons */}
+        <div className="social-icons">
+          <a
+            href="https://www.linkedin.com/in/onkarmahamuni/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedInIcon />
+           <LinkedInIcon />
           </a>
-          <a href="mailto:onkarmahamuni007@gmail.com"> 
+          <a href="mailto:onkarmahamuni007@gmail.com">
             <EmailIcon />
           </a>
           <a
@@ -29,12 +32,14 @@ function Home() {
           >
             <GitHubIcon />
           </a>
+        </div>
+      </div>
 
       <div className="skills">
-        <h1> Skills</h1>
+        <h1>Skills</h1>
         <ol className="list">
           <li className="item">
-            <h2> Front-End</h2>
+            <h2>Front-End</h2>
             <span>
               ReactJS, Angular, Redux, HTML, CSS, React Native, Flutter, NPM,
               Ionic, BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
@@ -52,7 +57,7 @@ function Home() {
             <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
           </li>
         </ol>
-        </div>
+      </div>
     </div>
   );
 }

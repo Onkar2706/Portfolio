@@ -2,7 +2,7 @@
     width: 100%;
     align-items: center;
     font-family: "Arial", sans-serif;
-    color: #3e497a;
+    color: #455462;
   }
   
   .about {
@@ -13,25 +13,40 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #21325e;
-    color: #f0f0f0;
+    background-color: #eef0f7;
+    color: #455462;
   }
   
   .about h2 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 80px;
-    color: #e9d35b;
-    height: 50px;
+    font-size: 70px;
+    color: #1e3192;
+    margin: 0;
   }
   
   .about .prompt {
-    width: 40%;
-    font-size: 30px;
+    width: 50%;
+    font-size: 24px;
+    margin: 15px 0;
+    color: #3e497a;
   }
-  .prompt svg {
-    font-size: 60px;
-    margin: 5px;
-    color: white;
+  
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 100px;
+    color: #1e3192;
+  }
+  
+  .social-icons a {
+    color: #1e3192;
+    transition: color 0.3s;
+    size: 50px;
+    font-size: medium;
+  }
+  
+  .social-icons a:hover {
+    color: #3e497a;
   }
   
   .skills {
@@ -41,19 +56,34 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: #061344;
+    padding: 40px 0;
   }
   
   .skills h1 {
-    color: #3e497a;
+    color: #bfc5e1;
+    margin-bottom: 20px;
   }
   
   .skills .list {
     list-style: none;
     width: 60%;
+    padding: 0;
+  }
+  
+  .list .item {
+    margin-bottom: 25px;
+  }
+  
+  .item h2 {
+    color: #b3b8cf;
+    font-size: 28px;
+    margin: 0;
   }
   
   .list span {
-    font-size: 20px;
+    font-size: 18px;
+    color: #555;
   }
   
   @media only screen and (max-width: 600px) {
@@ -63,18 +93,29 @@
   
     .about .prompt {
       margin-top: 10px;
-      font-size: 20px;
+      font-size: 18px;
       width: 80%;
     }
   
-    .skills {
-      text-align: center;
-    }
-    .list {
-      padding: 0;
+    .social-icons {
+      font-size: 30px;
+      gap: 15px;
     }
   
-    .skills h2 {
+    .skills {
       font-size: 30px;
     }
+  
+    .skills h1 {
+      font-size: 28px;
+    }
+  
+    .list .item h2 {
+      font-size: 24px;
+    }
+  
+    .list span {
+      font-size: 16px;
+    }
   }
+  
