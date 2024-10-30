@@ -10,7 +10,7 @@ function Home() {
       <div className="about">
         <h2>Hi, I am Onkar.</h2>
         <div className="prompt">
-          <p>A software developer with a passion for learning and creating.</p>
+          <p>A software developer with a passion for learning and creating.Currently a Masters Student at Stevens Institute of Technology.</p>
         </div>
         
         {/* Social Media Icons */}
