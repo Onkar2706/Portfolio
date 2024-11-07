@@ -1,0 +1,102 @@
+/* projects.css */
+
+.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Light Mode Styles */
+  body.light .projects h1 {
+    color: #5a43cb; /* Light mode main heading color */
+  }
+  
+  body.light .projects .projectTitle {
+    text-align: center;
+    color: #3e497a; /* Light mode project title color */
+    font-size: 60px;
+    font-weight: bolder;
+  }
+  
+  body.light .projectItem h1 {
+    font-size: 25px;
+    color: #242329; /* Light mode project item title color */
+  }
+  
+  /* Dark Mode Styles */
+  body.dark .projects h1 {
+    color: #c1b6fc; /* Dark mode main heading color */
+  }
+  
+  body.dark .projects .projectTitle {
+    text-align: center;
+    color: #ffffff; /* Dark mode project title color */
+    font-size: 60px;
+    font-weight: bolder;
+  }
+  
+  body.dark .projectItem h1 {
+    font-size: 25px;
+    color: #242329; /* Dark mode project item title color */
+  }
+  
+  body.dark .projectItem {
+    background-color: #ffffff;
+  }
+  
+  /* Project List Styles */
+  .projectList {
+    width: 70vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+  
+  /* Project Item Styling */
+  .projectItem {
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .projectItem:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  .projectItem .bgImage {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Responsive Media Queries */
+  @media only screen and (max-width: 1300px) {
+    .projectList {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .projectList {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  
+    .projectItem {
+      width: 300px;
+      height: 300px;
+    }
+  }
